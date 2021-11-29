@@ -18,4 +18,4 @@
  <%= render @posts %>
 </div>
 
-<%= render "posts/form", locals: { conversation: @conversation, post: Post.new } %>
+<%= render partial: "posts/form", locals: { conversation: @conversation, post: Post.new } %>
