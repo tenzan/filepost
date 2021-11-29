@@ -15,7 +15,7 @@
     <% @conversations.each do |conversation| %>
       <tr>
         <td><%= conversation.subject %></td>
-        <td><%= conversation.contact_id %></td>
+        <td><%= link_to conversation.contact.name, conversation.contact %></td>
         <td><%= link_to 'Show', conversation %></td>
         <td><%= link_to 'Edit', edit_conversation_path(conversation) %></td>
         <td><%= link_to 'Destroy', conversation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
